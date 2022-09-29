@@ -1,0 +1,48 @@
+4) This was also coding question related to strings
+Question - Given a string s , little Johny defined the beauty of the string as the sum of the beauty of the letters in it. 
+The beauty of each letter is an integer between 1 to 26, inclusive , and no two letters have the same beauty.
+Johny does not care about whether the letters are uppercase or lowercase , so that does not affect the beauty of letter.
+
+Test input - ABbCcc
+Expected output - 152
+
+
+
+letters = {"a" : 24,
+"b": 25,
+"c" : 26,
+"d" : 1,
+"e" : 2,
+"f" : 3,
+"g" : 4,
+"h" : 5,
+"i" : 6,
+"j" : 7,
+"k" : 8,
+"l": 9,
+"m" : 10,
+"n" : 11,
+"o" : 12,
+"p": 13,
+"q" : 14,
+"r" : 15,
+"s" : 16,
+"t" : 17,
+"u" : 18,
+"v" : 19,
+"w" : 20,
+"x" : 21,
+"y" : 22,
+"z" : 23,
+}
+
+s=input().split()
+for line in s:
+    line = line.lower()
+
+beauty = 0
+
+for char in line:
+    if char in letters.keys():
+        beauty += letters[char]
+print(beauty)
